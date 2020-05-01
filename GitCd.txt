@@ -1,0 +1,69 @@
+github
+git --version
+git init : init(initialize : 초기화), 해당 dir를 Local Repository로 변경
+git status : Local Repo의 상태 변경이 필요한 파일들을 알려줌
+
+git config --global user.name <user name>
+git config --global user.email <user email>
+git clone <url>
+
+git add . 모든 파일 업로드
+git add <e.g. document.txt>
+git reset document.txt : staging area 에서 내려오게 할 수 있음
+git commit --amend : 잘못쓴걸 수정
+git commit -m "e.g. Add Text File [document.txt]"
+git remote add orign : git remote add는 현재의 Local Repo를 특정 Repo에 연결하는 명령어
+git remote -v : 연결이 잘 되어있는지 확인
+git push : github에 remote branch(?)에 업로드
+# git push origin master
+
+Local Repository와 Remote Repository를 동기화
+1. git fetch : Remote Repository에서 다른 사람이 수정한 내역을 가져올 때
+2. git merge
+git pull : git fetch와 git merge를 한번에 사용
+
+git log 목록확인
+git reset --hard 362848cbcfa19b2af57e9ca2d66ff4c7dae04c3d 특정 커밋이후로 전부 제거, 로컬저장소만 바뀜
+git push -f를 하면 깃허브저장소도 로컬과 같아짐
+
+# commit 수정
+git commit --ammend
+unix editor에서 a 입력하면 수정가능 그후에 Esc 누르고 :wq!
+
+git branch : 브랜치 확인
+git branch develop : 디벨럽 브랜치 생성
+git checkout develop : 디벨럽 브랜치로 이동
+git checkout master : 마스터 브랜치로 이동
+git merge develop : 디벨럽 브랜치 통합, 
+디벨럽브랜치 병합은 마스터브랜치로 돌아온 뒤에 해야함
+git branch -d develop : develop 브랜치 제거
+
+원격 저장소
+git remote : 현재 원격저장소로 등록된 것 확인
+git remote show orign : 특정 원격저장소 정보 확인
+git remote add 이름 url : 원격 저장소 등록
+git remote -v : 연결된 원격저장소 전체목록 확인
+git remote rename 기존이름 새이름 : 이름변경
+git log origin/master : 원격저장소에 대한 log
+git merge origin/master
+git remote rm 이름 : 특정저장소 제거
+
+git log --stat : 각 commit에 대한 통계정보 출력,
+실제로 해당파일에 얼마나 많은 라인이 추가됐는지 확인가능
+graph : 브랜치와 병합정보를 그래프 형태로 출력
+p : commit에 적용된 구체적인 항목들 출력
+e.g. git log -p -3 : 위에서 3개 까지만 출력
+pretty : commit 정보를 지정한 형식으로 출력
+e.g. git log --pretty=oneline : 각각의 commit 내역들이 한줄로 출력
+     git log --pretty=format:"%h -> %an, %ar : %s" --graph
+     %h:해시값, %an:작성자이름, %ar:작성날짜, %s:commit주제 
+
+
+cd : change directory
+cd C:\<e.g.>
+dir 디렉토리 확인
+
+# Repo : 저장소
+
+
+
